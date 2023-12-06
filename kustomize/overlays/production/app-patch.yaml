@@ -5,4 +5,4 @@ metadata:
 spec:
   parameters:
     namespace: production
-    image: docker.io/syedanees85/demo-app:0.0.0
+    image: docker.io/syedanees85/demo-app:0.0.1
