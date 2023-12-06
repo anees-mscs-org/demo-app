@@ -21,6 +21,14 @@ func main() {
 }
 
 func rootHandler(ctx *gin.Context) {
-	output := "This is a silly demo"
+	dbEndpoint := os.Getenv("DB_ENDPOINT")
+	dbPort := os.Getenv("DB_PORT")
+	dbName := os.Getenv("DB_NAME")
+
+	output := "DB_ENDPOINT: " + dbEndpoint + "\n" +
+						"DB_PORT: " + dbPort + "\n" +
+						"DB_NAME: " + dbName + "\n" + 
+						"This is a silly demo"
+
 	ctx.String(http.StatusOK, output)
 }
